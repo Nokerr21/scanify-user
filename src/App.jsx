@@ -51,10 +51,17 @@ export default function WebApp(){
 
 
     async function readTag() {
-        if ("NDEFReader" in window) {
-          const ndef = new NDEFReader();
-          try {
-            await ndef.scan();
+      if ("NDEFReader" in window) {
+        const ndef = new NDEFReader();
+        try {
+          return new Promise((resolve, reject) => {
+            const ctlr = new AbortController();
+            ctlr.signal.onabort = reject;
+            ndef.addEventListener("reading", event => {
+              ctlr.abort();
+              resolve(event);
+            }, { once: true });
+            ndef.scan({ signal: ctlr.signal }).catch(err => reject(err));
             ndef.onreading = event => {
               const decoder = new TextDecoder();
               for (const record of event.message.records) {
@@ -67,33 +74,16 @@ export default function WebApp(){
                 consoleLog("---- data ----\n" + decoder.decode(record.data) + "\n" + "TimeStamp: " + dateTime);
               }
             }
-          } catch(error) {
-            consoleLog(error);
-          }
-        } else {
-          consoleLog("Web NFC is not supported.");
+          });
+        } catch(error) {
+          consoleLog(error);
         }
+      } else {
+        consoleLog("Web NFC is not supported.");
       }
+    }
       
-      async function writeTag(message) {
-        if ("NDEFReader" in window) {
-          const ndef = new NDEFReader();
-          try {
-            await ndef.write(message);
-            var today = new Date();
-            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() + ":" + today.getMilliseconds();
-            var dateTime = date+' '+time;
-            consoleLogWrite("Message: '" + message + "' written!" + "\n" + "TimeStamp: " + dateTime);
-            setMessage("")
-          } catch(error) {
-            consoleLogWrite(error);
-            setMessage("")
-          }
-        } else {
-          consoleLogWrite("Web NFC is not supported.");
-        }
-      }
+      
       
       function consoleLog(data) {
         var logElement = document.getElementById('log');
@@ -101,11 +91,6 @@ export default function WebApp(){
         logElement.innerHTML += data + '\n';
       }
 
-      function consoleLogWrite(data) {
-        var logElement = document.getElementById('logWrite');
-        logElement.innerHTML = ""
-        logElement.innerHTML += data + '\n';
-      }
 
       function consoleLogQR(data) {
         var logElement = document.getElementById('logQR');
@@ -118,6 +103,14 @@ export default function WebApp(){
     return (
         <>
         <form onSubmit={handleSubmit} className="new-item-form">
+            <nav className="nav">
+              <label className="site-title">
+                NFCONTROL
+              </label>
+              <ul>
+                <a href="https://nokerr21.github.io/nfcontrol/">About</a>
+              </ul>
+            </nav>
             <div className="form-row">
                 <label>READ NFC</label>
                 <button onClick={() => readTag()} className="btn">READ</button>
