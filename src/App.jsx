@@ -119,7 +119,7 @@ export default function WebApp(){
         <>
         <form onSubmit={handleSubmit} className="new-item-form">
             <div className="form-row">
-                <label>READ NFC!!!</label>
+                <label>READ NFC</label>
                 <button onClick={() => readTag()} className="btn">READ</button>
                 <pre id="log"></pre>
             </div>
