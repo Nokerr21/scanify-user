@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { Html5QrcodeScanner } from "html5-qrcode"
 
 
-export default function WebApp(){
+export default function App(){
   const [message, setMessage] = useState("")
   const [scanResult, setScanResult] = useState("")
   const [scanTime, setScanTime] = useState("")
