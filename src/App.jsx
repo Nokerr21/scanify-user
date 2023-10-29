@@ -7,17 +7,13 @@ import { QrScannerComponent } from "./components/Qrs/QrScannerComponent";
 
 export default function App(){
 
-
-  
- 
-
   useEffect(() => {
     renderQrScanner();
-  }, [])
+  }, []);
 
-    function handleSubmit(e) {
-        e.preventDefault()
-    }
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
 
 
       
@@ -26,20 +22,13 @@ export default function App(){
 
     
     
-    return (
-        <>
-        <form onSubmit={handleSubmit} className="new-item-form">
-        <NavComponent />
-        <ReadTagComponent />
-            <div className="form-row">
-            <QrScannerComponent />
-            </div>
-        </form>
-        </>
-    )
-
-      
-      
-    
-    
+  return (
+  <>
+    <form onSubmit={handleSubmit} className="new-item-form">
+      <NavComponent />
+      <ReadTagComponent />
+      <QrScannerComponent />
+    </form>
+  </>
+  );
 }
