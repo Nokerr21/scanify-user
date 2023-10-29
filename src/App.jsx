@@ -15,13 +15,6 @@ export default function App(){
     e.preventDefault();
   }
 
-
-      
-      
- 
-
-    
-    
   return (
   <>
     <form onSubmit={handleSubmit} className="new-item-form">
