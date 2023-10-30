@@ -28,7 +28,7 @@ export default async function readTag() {
             logReadTag("---- data ----\n" + decoder.decode(record.data) + "\n" + "TimeStamp: " + dateTime);
           }
         }
-      }).catch();
+      }).catch(alert);
       var res = axios.get('http://192.168.1.69:3000/api/nfcs/' + temp)
       var nfc = res.data;
     } catch(error) {
