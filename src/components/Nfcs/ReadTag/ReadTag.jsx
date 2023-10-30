@@ -1,4 +1,5 @@
 import logReadTag from "./LogReadTag";
+import axios from "axios";
 
 
 export default async function readTag() {
@@ -29,5 +30,8 @@ export default async function readTag() {
     }
   } else {
     logReadTag("Web NFC is not supported.");
+    var res = axios.get('http://localhost:3000/api/nfcs/65366117f625ff6fec626561')
+    var nfc = (await res).data;
+    console.log(nfc);
   }
 }
