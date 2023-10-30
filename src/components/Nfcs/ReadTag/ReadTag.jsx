@@ -22,28 +22,18 @@ export default async function readTag() {
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() + ":" + today.getMilliseconds();
             var dateTime = date + ' ' + time;
             console.log("1");
-            //var res = axios.get('http://192.168.1.69:3000/api/nfcs/' + decoder.decode(record.data))
-            //var nfc = res.data;
-            const temp = decoder.decode(record.data)
-            logReadTag("---- data ----\n" + decoder.decode(record.data) + "\n" + "TimeStamp: " + dateTime);
+            var res = axios.get('http://192.168.1.69:3000/api/nfcs/' + decoder.decode(record.data))
+            var nfc = res.data;
+            logReadTag("---- data ----\n" + nfc + "\n" + "TimeStamp: " + dateTime);
           }
         }
       }).catch(err => {
         console.log("NFC reading stopped...");
-      });
-      
+      });  
     } catch(error) {
-      if (error instanceof Error && error.name === 'AbortError') {
-        // work time expired, just return
-      }
-      else{
-        logReadTag(error);
-      }
-      
+      logReadTag(error);
     }
   } else {
-    var res = axios.get('http://192.168.1.69:3000/api/nfcs/65366117f625ff6fec626561')
-    var nfc = res.data;
     logReadTag("Web NFC is not supported.");
     console.log(nfc)
   }
