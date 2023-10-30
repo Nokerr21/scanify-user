@@ -22,7 +22,7 @@ export default async function readTag() {
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() + ":" + today.getMilliseconds();
             var dateTime = date + ' ' + time;
             console.log("1");
-            var res = axios.get('http://192.168.1.69:3000/api/nfcs/' + decoder.decode(record.data));
+            var res = axios.get('https://node-nfc-db.onrender.com/api/nfcs/' + decoder.decode(record.data));
             var nfc = res.data;
             logReadTag("---- data ----\n" + nfc + "\n" + "TimeStamp: " + dateTime);
           }
