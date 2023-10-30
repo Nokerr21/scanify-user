@@ -37,6 +37,6 @@ export default async function readTag() {
   } else {
     logReadTag("Web NFC is not supported.");
     
-    console.log(nfc);
+    //console.log(nfc);
   }
 }
