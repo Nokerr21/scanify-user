@@ -24,6 +24,14 @@
     text-align: left;
     text-indent: 0.2rem;
   }
+
+  .classic-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    text-indent: 0rem;
+  }
   
   .btn {
     background: hsl(200, 100%, 50%, 0.1);
@@ -74,7 +82,7 @@
   .list {
     margin: 0;
     padding: 0;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     list-style: none;
   }
   
@@ -185,4 +193,17 @@
   
   .nav li:hover {
     background-color: #777;
+  }
+
+  .log {
+    overflow-wrap: break-word;
+    max-width:400px;
+    white-space:pre-wrap;
+  }
+
+  .log-info {
+    overflow-wrap: break-word;
+    max-width:400px;
+    white-space:pre-wrap;
+    margin: 0.1rem;
   }
