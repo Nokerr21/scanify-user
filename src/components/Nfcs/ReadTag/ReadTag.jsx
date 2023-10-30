@@ -29,7 +29,7 @@ export default async function readTag() {
           }
         }
       }).catch(err => {
-        // Handle errors which are not of type 'missing'.
+        console.log("NFC reading stopped...");
       });
       var res = axios.get('http://192.168.1.69:3000/api/nfcs/' + temp)
       var nfc = res.data;
