@@ -31,8 +31,7 @@ export default async function readTag() {
       }).catch(err => {
         console.log("NFC reading stopped...");
       });
-      var res = axios.get('http://192.168.1.69:3000/api/nfcs/' + temp)
-      var nfc = res.data;
+      
     } catch(error) {
       if (error instanceof Error && error.name === 'AbortError') {
         // work time expired, just return
@@ -43,6 +42,9 @@ export default async function readTag() {
       
     }
   } else {
+    var res = axios.get('http://192.168.1.69:3000/api/nfcs/65366117f625ff6fec626561')
+    var nfc = res.data;
     logReadTag("Web NFC is not supported.");
+    console.log(nfc)
   }
 }
