@@ -21,12 +21,16 @@ export default async function readTag() {
             var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() + ":" + today.getMilliseconds();
             var dateTime = date + ' ' + time;
-            var res = axios.get('http://192.168.1.69:3000/api/nfcs/' + decoder.decode(record.data))
-            var nfc = res.data;
-            logReadTag("---- data ----\n" + decoder.decode(nfc) + "\n" + "TimeStamp: " + dateTime);
+            console.log("1");
+            //var res = axios.get('http://192.168.1.69:3000/api/nfcs/' + decoder.decode(record.data))
+            //var nfc = res.data;
+            const temp = decoder.decode(record.data)
+            logReadTag("---- data ----\n" + decoder.decode(record.data) + "\n" + "TimeStamp: " + dateTime);
           }
         }
       });
+      var res = axios.get('http://192.168.1.69:3000/api/nfcs/' + temp)
+      var nfc = res.data;
     } catch(error) {
       logReadTag(error);
     }
