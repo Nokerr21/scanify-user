@@ -21,7 +21,7 @@ export default async function readTag() {
             var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() + ":" + today.getMilliseconds();
             var dateTime = date + ' ' + time;
-            var res = axios.get('http://192.168.1.69:3000/api/nfcs/' + record.data)
+            var res = axios.get('http://192.168.1.69:3000/api/nfcs/' + decoder.decode(record.data))
             var nfc = res.data;
             logReadTag("---- data ----\n" + decoder.decode(nfc) + "\n" + "TimeStamp: " + dateTime);
           }
