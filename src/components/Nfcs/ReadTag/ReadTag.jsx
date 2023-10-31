@@ -2,7 +2,7 @@ import logReadTag from "./LogReadTag";
 import axios from "axios";
 
 
-export default async function readTag() {
+export default function readTag() {
   if ("NDEFReader" in window) {
     const ndef = new NDEFReader();
     try {
@@ -23,7 +23,6 @@ export default async function readTag() {
             var dateTime = date + ' ' + time;
             var res = axios.get('https://node-nfc-db.onrender.com/api/nfcs/' + decoder.decode(record.data));
             console.log(res)
-            then(console.log(res))
             logReadTag("---- data ----\n" + res + "\n" + "TimeStamp: " + dateTime);
           }
         }
