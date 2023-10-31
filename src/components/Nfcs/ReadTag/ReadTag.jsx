@@ -1,7 +1,6 @@
 import logReadTag from "./LogReadTag";
 import axios from "axios";
 
-const id = "";
 
 export default async function readTag() {
   if ("NDEFReader" in window) {
@@ -24,11 +23,10 @@ export default async function readTag() {
             var dateTime = date + ' ' + time;
             console.log("1");
             var res = axios.get('https://node-nfc-db.onrender.com/api/nfcs/' + decoder.decode(record.data));
-            var nfc = res.data;
+            res.then(logReadTag("---- data ----\n" + res + "\n" + "TimeStamp: " + dateTime));
             console.log(nfc)
             console.log(res)
-            id = decoder.decode(record.data);
-            //logReadTag("---- data ----\n" + res + "\n" + "TimeStamp: " + dateTime);
+            
           }
         }
       }).catch(err => {
@@ -44,9 +42,6 @@ export default async function readTag() {
       }
       
     }
-    var res = axios.get('https://node-nfc-db.onrender.com/api/nfcs/' + id);
-    var nfc = res.data;
-    logReadTag("---- data ----\n" + nfc + "\n" + "TimeStamp: " + dateTime);
   } else {
     var res = axios.get('http://localhost:3000/api/nfcs/65366117f625ff6fec626561')
     var nfc = res.data;
