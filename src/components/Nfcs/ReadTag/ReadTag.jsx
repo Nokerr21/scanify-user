@@ -23,7 +23,7 @@ export default function readTag() {
             var dateTime = date + ' ' + time;
             axios.get('https://node-nfc-db.onrender.com/api/nfcs/' + decoder.decode(record.data)).then(function(result){
               console.log(result.data)
-              logReadTag("---- data ----\n" + result.data + "\n" + "TimeStamp: " + dateTime);
+              logReadTag("---- data ----\n" + JSON.stringify(result.data) + "\n" + "TimeStamp: " + dateTime);
             });
           }
         }
