@@ -2,7 +2,7 @@ import logReadTag from "./LogReadTag";
 import axios from "axios";
 
 
-export default function readTag() {
+export default async function readTag() {
   if ("NDEFReader" in window) {
     const ndef = new NDEFReader();
     try {
@@ -22,7 +22,8 @@ export default function readTag() {
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() + ":" + today.getMilliseconds();
             var dateTime = date + ' ' + time;
             axios.get('https://node-nfc-db.onrender.com/api/nfcs/' + decoder.decode(record.data)).then(function(result){
-              logReadTag("---- data ----\n" + result.data.info.toString() + "\n" + "TimeStamp: " + dateTime);
+              logReadTag("Product information:\n" + result.data.info.toString() + "\n" + "Index: " + result.data.index.toString() +
+              "\n"+ "Batch number: " + result.data.batchNumber.toString() + "TimeStamp: " + dateTime);
             });
           }
         }
