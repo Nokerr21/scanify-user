@@ -21,7 +21,10 @@ export default function readTag() {
             var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() + ":" + today.getMilliseconds();
             var dateTime = date + ' ' + time;
-            var res = axios.get('https://node-nfc-db.onrender.com/api/nfcs/' + decoder.decode(record.data));
+            var res = axios.get('https://node-nfc-db.onrender.com/api/nfcs/' + decoder.decode(record.data)).then(function(result){
+              console.log(result)
+            });
+
             console.log(res)
             logReadTag("---- data ----\n" + res + "\n" + "TimeStamp: " + dateTime);
           }
@@ -40,9 +43,9 @@ export default function readTag() {
       
     }
   } else {
-    var res = axios.get('http://localhost:3000/api/nfcs/65366117f625ff6fec626561')
-    var nfc = res.data;
+    //var res = axios.get('http://localhost:3000/api/nfcs/65366117f625ff6fec626561')
+    //var nfc = res.data;
     logReadTag("Web NFC is not supported.");
-    console.log(nfc)
+    //console.log(nfc)
   }
 }
