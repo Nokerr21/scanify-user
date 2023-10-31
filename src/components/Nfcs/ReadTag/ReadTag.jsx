@@ -23,7 +23,7 @@ export default async function readTag() {
             var dateTime = date + ' ' + time;
             axios.get('https://node-nfc-db.onrender.com/api/nfcs/' + decoder.decode(record.data)).then(function(result){
               logReadTag("Product information:\n" + result.data.info.toString() + "\n" + "Index: " + result.data.index.toString() +
-              "\n"+ "Batch number: " + result.data.batchNumber.toString() + "TimeStamp: " + dateTime);
+              "\n" + "Batch number: " + result.data.batchNumber.toString() + "\n" + "TimeStamp: " + dateTime);
             });
           }
         }
