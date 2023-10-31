@@ -21,15 +21,16 @@ export default async function readTag() {
             var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() + ":" + today.getMilliseconds();
             var dateTime = date + ' ' + time;
-            console.log("1");
             var res = axios.get('https://node-nfc-db.onrender.com/api/nfcs/' + decoder.decode(record.data));
-            res.then(console.log(res))
+            var nfc = res.data;
             console.log(nfc)
             console.log(res)
-            
+            logReadTag("---- data ----\n" + res + "\n" + "TimeStamp: " + dateTime);
           }
         }
-      }).catch(err => {
+      })
+      .then(logReadTag("---- data ----\n" + res + "\n" + "TimeStamp: " + dateTime))
+      .catch(err => {
         console.log("NFC reading stopped...");
       });
       
