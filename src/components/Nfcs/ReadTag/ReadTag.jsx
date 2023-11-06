@@ -22,8 +22,15 @@ export default async function readTag() {
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() + ":" + today.getMilliseconds();
             var dateTime = date + ' ' + time;
             axios.get('https://node-nfc-db.onrender.com/api/nfcs/' + decoder.decode(record.data)).then(function(result){
-              logReadTag("Product information:\n" + result.data.info.toString() + "\n" + "Index: " + result.data.index.toString() +
-              "\n" + "Batch number: " + result.data.batchNumber.toString() + "\n" + "TimeStamp: " + dateTime);
+              if(result.data.batchNumber != undefined){
+                logReadTag("Product information:\n" + result.data.info.toString() + "\n" + "Index: " + result.data.index.toString() +
+                "\n" + "Batch number: " + result.data.batchNumber.toString() + "\n" + "TimeStamp: " + dateTime);
+              }
+              else{
+                logReadTag("Product information:\n" + result.data.info.toString() + "\n" + "Index: " + result.data.index.toString() +
+                "\n" + "TimeStamp: " + dateTime);
+              }
+              
             });
           }
         }
