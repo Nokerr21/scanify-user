@@ -18,6 +18,14 @@
     text-indent: 0.2rem;
   }
 
+  .reader {
+    margin-left: -1.98rem;
+    margin-right: -1.98rem;
+    margin-bottom: -1rem;
+    border-style: solid;
+    border-color: #272727;
+  }
+
   .btn {
     background: hsl(200, 100%, 50%, 0.1);
     border: 1px solid hsl(200, 100%, 50%);
