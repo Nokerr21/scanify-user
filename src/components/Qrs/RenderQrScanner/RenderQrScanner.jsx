@@ -5,11 +5,11 @@ import { sleep } from "./Sleep";
 export function renderQrScanner(){
     const scannerConfig = {
         fps: 10,
-        qrbox: {width: 200, height: 250},
+        qrbox: 250,
         supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
         rememberLastUsedCamera: false,
         showTorchButtonIfSupported: true,
-        aspectRatio: 1.777778,
+        aspectRatio: 4/3,
     }
     const html5QrcodeScanner = new Html5QrcodeScanner("readerQR", scannerConfig);
   
