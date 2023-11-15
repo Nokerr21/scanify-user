@@ -1,9 +1,16 @@
-import { Html5QrcodeScanner } from "html5-qrcode";
+import { Html5QrcodeScanner, Html5QrcodeScanType } from "html5-qrcode";
 import { logQrScanRes } from "./LogQrScanRes";
 import { sleep } from "./Sleep";
 
 export function renderQrScanner(){
-    const html5QrcodeScanner = new Html5QrcodeScanner("readerQR", { fps: 5, qrbox: 400 });
+    const scannerConfig = {
+        fps: 10,
+        qrbox: {width: 100, height: 100},
+        supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
+        rememberLastUsedCamera: false,
+        showTorchButtonIfSupported: true, 
+    }
+    const html5QrcodeScanner = new Html5QrcodeScanner("readerQR", scannerConfig);
   
     html5QrcodeScanner.render(onScanSuccess);
 
