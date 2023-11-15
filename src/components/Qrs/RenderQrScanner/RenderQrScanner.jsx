@@ -4,7 +4,7 @@ import { sleep } from "./Sleep";
 
 export function renderQrScanner(){
     const scannerConfig = {
-        fps: 10,
+        fps: 15,
         qrbox: 250,
         supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
         rememberLastUsedCamera: false,
