@@ -48,9 +48,6 @@ export default async function readTag() {
       
     }
   } else {
-    //var res = axios.get('http://localhost:3000/api/nfcs/65366117f625ff6fec626561')
-    //var nfc = res.data;
-    logReadTag("Web NFC is not supported.");
-    //console.log(nfc)
+    logReadTag("Web NFC API is not supported in your browser.");
   }
 }
