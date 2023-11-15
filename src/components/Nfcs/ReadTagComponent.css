@@ -24,10 +24,11 @@
     border: 1px solid hsla(0, 0%, 100%, 0.8);
     color: hsla(0, 0%, 0%, 1);
     padding: 0.5em 0.75em;
-    border-radius: 0.5em;
+    border-radius: 1.5em;
     cursor: pointer;
     outline: none;
     font-size: 0.9em;
+    -webkit-tap-highlight-color: transparent;
   }
   
   .btn:hover,
