@@ -20,9 +20,9 @@
   }
 
   .btn {
-    background: hsl(200, 100%, 50%, 0.1);
-    border: 1px solid hsl(200, 100%, 50%);
-    color: hsl(200, 100%, 50%);
+    background: hsla(0, 0%, 90%, 0.7);
+    border: 1px solid hsla(0, 0%, 100%, 0.8);
+    color: hsla(0, 0%, 0%, 1);
     padding: 0.5em 0.75em;
     border-radius: 0.5em;
     cursor: pointer;
@@ -32,7 +32,7 @@
   
   .btn:hover,
   .btn:focus-visible {
-    background: hsl(200, 100%, 50%, 0.2);
+    background: hsla(0, 0%, 90%, 0.85);
   }
 
   .log {
