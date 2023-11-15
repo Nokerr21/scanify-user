@@ -3,7 +3,7 @@ import { logQrScanRes } from "./LogQrScanRes";
 import { sleep } from "./Sleep";
 
 export function renderQrScanner(){
-    const html5QrcodeScanner = new Html5QrcodeScanner("readerQR", { fps: 5, qrbox: 250 });
+    const html5QrcodeScanner = new Html5QrcodeScanner("readerQR", { fps: 5, qrbox: 400 });
   
     html5QrcodeScanner.render(onScanSuccess);
 
