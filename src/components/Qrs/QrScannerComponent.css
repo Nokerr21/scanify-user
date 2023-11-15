@@ -19,11 +19,12 @@
   }
 
   .reader {
-    margin-left: -1.98rem;
-    margin-right: -1.98rem;
-    margin-bottom: -1rem;
-    border-style: solid;
-    border-color: #272727;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: left;
   }
 
   .btn {

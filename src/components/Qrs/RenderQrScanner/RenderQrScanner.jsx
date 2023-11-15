@@ -9,7 +9,7 @@ export function renderQrScanner(){
         supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
         rememberLastUsedCamera: false,
         showTorchButtonIfSupported: true,
-        aspectRatio: 4/3,
+        aspectRatio: 4/3
     }
     const html5QrcodeScanner = new Html5QrcodeScanner("readerQR", scannerConfig);
   
