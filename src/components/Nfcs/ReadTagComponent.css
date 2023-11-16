@@ -37,7 +37,7 @@
   }
 
   .btn:active {
-    background: hsla(0, 0%, 100%, 0.95);
+    background: hsla(0, 0%, 90%, 0.95);
   }
 
   .log {
