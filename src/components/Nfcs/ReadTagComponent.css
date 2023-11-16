@@ -32,9 +32,12 @@
   }
   
   .btn:hover,
-  .btn:focus-visible,
-  .btn:active {
+  .btn:focus-visible {
     background: hsla(0, 0%, 90%, 0.85);
+  }
+
+  .btn:active {
+    background: hsla(0, 0%, 90%, 0.9);
   }
 
   .log {
