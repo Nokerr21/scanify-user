@@ -32,7 +32,8 @@
   }
   
   .btn:hover,
-  .btn:focus-visible {
+  .btn:focus-visible,
+  .btn:active {
     background: hsla(0, 0%, 90%, 0.85);
   }
 
