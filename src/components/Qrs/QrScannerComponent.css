@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding:2rem;
+    padding:1.1rem;
     border-radius: 2rem;
     box-shadow: 7px 7px #272727;
     display: flex;
@@ -19,8 +19,8 @@
   }
 
   .reader {
-    margin-left: -1rem;
-    margin-right: -1rem;
+    margin-left: -0.1rem;
+    margin-right: -0.1rem;
     display: flex;
     flex-direction: column;
     text-align: left;
