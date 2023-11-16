@@ -48,6 +48,6 @@ export default async function readTag() {
       
     }
   } else {
-    logReadTag("Web NFC API is not supported in your browser.");
+    logReadTag("Web NFC API is not supported in your browser");
   }
 }
