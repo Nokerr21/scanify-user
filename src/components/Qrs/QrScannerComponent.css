@@ -47,20 +47,21 @@
   }
 
 #readerQR { 
-  border: none !important; 
+  border: none !important;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
 }
 
 #readerQR select {
   background: hsla(0, 0%, 90%, 0.7);
   color: hsla(0, 0%, 0%, 1);
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
 }
   
 #readerQR img[alt="Info icon"] { 
   display: none !important;
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
 } 
   
-button {
+#readerQR button {
   background: hsla(0, 0%, 90%, 0.7);
   border: 1px solid hsla(0, 0%, 100%, 0.8);
   color: hsla(0, 0%, 0%, 1);
@@ -75,20 +76,15 @@ button {
   transition: 0.3s background; 
 } 
   
-button:hover,
+#readerQR button:hover,
 button:focus-visible { 
   background: hsla(0, 0%, 90%, 0.85);
 }
 
-button:active{
+#readerQR button:active{
   background: hsla(0, 0%, 90%, 0.95);
 }
   
-#html5-qrcode-anchor-scan-type-change { 
-  text-decoration: none !important; 
-  color: #1d9bf0;
-}
-  
-video {
+#readerQR video {
   border: 1px solid hsla(0, 0%, 90%, 0.95) !important; 
 }
