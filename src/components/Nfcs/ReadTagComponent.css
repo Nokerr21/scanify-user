@@ -27,8 +27,10 @@
     border-radius: 1.5em;
     cursor: pointer;
     outline: none;
-    font-size: 0.9em;
     -webkit-tap-highlight-color: transparent;
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
   }
   
   .btn:hover,
@@ -47,11 +49,15 @@
     color: white;
     margin-bottom: 0rem;
     text-indent: 0;
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    font-weight: bold;
   }
 
   .labl {
     color: white;
     margin-bottom: 0.5rem;
     font-size: large;
+    font-family: "Prompt", Arial, Helvetica, sans-serif;
     font-weight: bold;
+    font-size: large;
   }

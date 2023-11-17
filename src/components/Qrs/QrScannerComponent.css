@@ -24,18 +24,68 @@
     display: flex;
     flex-direction: column;
     text-align: left;
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    font-weight: bold;
   }
 
   .log {
     overflow-wrap: break-word;
     max-width: 400px;
     white-space: pre-wrap;
+    color: white;
     text-indent: 0;
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    font-weight: bold;
   }
 
   .labl {
     color: white;
     margin-bottom: 0.5rem;
+    font-family: "Prompt", Arial, Helvetica, sans-serif;
     font-size: large;
     font-weight: bold;
   }
+
+#readerQR { 
+    padding: 20px !important; 
+    border: 1.5px solid #b2b2b2 !important; 
+    border-radius: 8px; 
+} 
+  
+#readerQR img[alt="Info icon"] { 
+    display: none;
+} 
+  
+button {
+  background: hsla(0, 0%, 90%, 0.7);
+  border: 1px solid hsla(0, 0%, 100%, 0.8);
+  color: hsla(0, 0%, 0%, 1);
+  padding: 0.5em 0.75em;
+  border-radius: 1.5em;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;  
+  transition: 0.3s background; 
+} 
+  
+button:hover,
+button:focus-visible { 
+  background: hsla(0, 0%, 90%, 0.85);
+}
+
+button:active{
+  background: hsla(0, 0%, 90%, 0.95);
+}
+  
+#html5-qrcode-anchor-scan-type-change { 
+    text-decoration: none !important; 
+    color: #1d9bf0;
+}
+  
+video { 
+    border: 1px solid #b2b2b2 !important; 
+ 
+}
