@@ -47,13 +47,17 @@
   }
 
 #readerQR { 
-    padding: 20px !important; 
-    border: 1.5px solid #b2b2b2 !important; 
-    border-radius: 8px; 
-} 
+  border: none !important; 
+}
+
+#readerQR select {
+  background: hsla(0, 0%, 90%, 0.7);
+  color: hsla(0, 0%, 0%, 1);
+}
   
 #readerQR img[alt="Info icon"] { 
-    display: none;
+  display: none !important;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
 } 
   
 button {
@@ -81,11 +85,10 @@ button:active{
 }
   
 #html5-qrcode-anchor-scan-type-change { 
-    text-decoration: none !important; 
-    color: #1d9bf0;
+  text-decoration: none !important; 
+  color: #1d9bf0;
 }
   
-video { 
-    border: 1px solid #b2b2b2 !important; 
- 
+video {
+  border: 1px solid hsla(0, 0%, 90%, 0.95) !important; 
 }
