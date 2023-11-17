@@ -48,12 +48,15 @@
 
 #readerQR { 
   border: none !important;
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
 }
 
 #readerQR select {
   background: hsla(0, 0%, 90%, 0.7);
   color: hsla(0, 0%, 0%, 1);
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+}
+
+#readerQR span {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
 }
   
