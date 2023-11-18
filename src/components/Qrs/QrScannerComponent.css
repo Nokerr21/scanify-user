@@ -58,6 +58,7 @@
   color: hsla(0, 0%, 0%, 1) !important;
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   font-size: 0.9em;
+  padding: 0.5em 0.5em;
   font-weight: bold;
   margin-top: 0.3rem;
   margin-left: 0.5rem;
@@ -68,6 +69,7 @@
   max-width: 200px;
   white-space: pre-wrap;
   display: inline-block;
+  text-align: center;
 }
 
 #readerQR span {
