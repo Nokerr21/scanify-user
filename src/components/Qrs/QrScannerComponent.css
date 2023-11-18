@@ -68,12 +68,14 @@
   max-width: 200px !important;
   white-space: pre-wrap !important;
   text-align: center !important;
+  align-self: center;
 }
 
 #readerQR span {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   text-indent: 0;
   text-align: center;
+  align-self: center;
 }
   
 #readerQR img[alt="Info icon"] { 
