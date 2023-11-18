@@ -24,7 +24,7 @@
     margin-right: -0.1rem;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     font-family: "Ubuntu", Arial, Helvetica, sans-serif;
     font-weight: bold;
   }
@@ -68,17 +68,15 @@
   overflow-wrap: break-word !important;
   max-width: 200px !important;
   white-space: pre-wrap !important;
-  display: flex !important;
-  flex-direction: column !important;
+  display: inline-block;
   text-align: center !important;
 }
 
 #readerQR span {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   text-indent: 0;
-  display: flex;
-  flex-direction: column;
   text-align: center;
+  display: inline-block;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
