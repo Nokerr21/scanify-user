@@ -53,8 +53,6 @@
   border: none !important;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 #readerQR select {
@@ -72,6 +70,8 @@
   white-space: pre-wrap !important;
   display: inline-block;
   text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #readerQR span {
@@ -79,6 +79,8 @@
   text-indent: 0;
   text-align: center;
   display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
   
 #readerQR img[alt="Info icon"] { 
