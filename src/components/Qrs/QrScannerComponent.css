@@ -22,10 +22,6 @@
   .reader {
     margin-left: -0.1rem;
     margin-right: -0.1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-family: "Ubuntu", Arial, Helvetica, sans-serif;
     font-weight: bold;
   }
@@ -67,7 +63,7 @@
   overflow-wrap: break-word !important;
   max-width: 200px !important;
   white-space: pre-wrap !important;
-  display: flex;
+  display: inline-block;
   text-align: center !important;
 }
 
@@ -75,7 +71,7 @@
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   text-indent: 0;
   text-align: center;
-  display: flex;
+  display: inline-block;
 }
   
 #readerQR img[alt="Info icon"] { 
