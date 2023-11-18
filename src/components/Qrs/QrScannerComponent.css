@@ -67,7 +67,7 @@
   overflow-wrap: break-word !important;
   max-width: 200px !important;
   white-space: pre-wrap !important;
-  display: inline-block;
+  display: flex;
   text-align: center !important;
 }
 
@@ -75,7 +75,7 @@
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   text-indent: 0;
   text-align: center;
-  display: inline-block;
+  display: flex;
 }
   
 #readerQR img[alt="Info icon"] { 
