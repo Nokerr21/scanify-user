@@ -61,6 +61,7 @@
   margin-top: 0.2rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 #readerQR span {
@@ -69,7 +70,7 @@
   
 #readerQR img[alt="Info icon"] { 
   display: none !important;
-} 
+}
   
 #readerQR button {
   background: hsla(0, 0%, 90%, 0.7);
