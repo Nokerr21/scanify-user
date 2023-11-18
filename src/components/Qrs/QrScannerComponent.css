@@ -51,6 +51,8 @@
 
 #readerQR { 
   border: none !important;
+  display: flex;
+  flex-direction: column;
 }
 
 #readerQR select {
@@ -59,7 +61,7 @@
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   font-size: 0.9em;
   font-weight: bold;
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   border-radius: 0.5rem !important;
