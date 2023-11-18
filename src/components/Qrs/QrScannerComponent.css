@@ -95,8 +95,6 @@
   font-size: 0.9em;  
   transition: 0.3s background;
   margin-top: 1rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 } 
   
 #readerQR button:hover,
