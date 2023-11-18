@@ -65,7 +65,7 @@
   border-radius: 0.5rem !important;
   border: 1px solid hsla(0, 0%, 100%, 0.8) !important;
   overflow-wrap: break-word;
-  max-width: 250px;
+  max-width: 200px;
   white-space: pre-wrap;
   display: inline-block;
 }
@@ -99,7 +99,6 @@
   margin-top: 1rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  display: inline-block;
 } 
   
 #readerQR button:hover,
