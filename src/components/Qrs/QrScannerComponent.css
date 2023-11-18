@@ -62,13 +62,14 @@
   font-weight: bold;
   margin-top: 0.3rem !important;
   margin-left: 1rem !important;
-  margin-right: 0.5rem !important;
+  margin-right: 1rem !important;
   border-radius: 0.5rem !important;
   border: 1px solid hsla(0, 0%, 100%, 0.8) !important;
   overflow-wrap: break-word !important;
   max-width: 200px !important;
   white-space: pre-wrap !important;
-  display: inline-block;
+  display: flex !important;
+  flex-direction: column !important;
   text-align: center !important;
 }
 
