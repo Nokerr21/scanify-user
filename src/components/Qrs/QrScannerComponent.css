@@ -67,8 +67,6 @@
   white-space: pre-wrap !important;
   display: inline-block;
   text-align: center !important;
-  margin-left: 1.8rem;
-  margin-right: 1rem;
 }
 
 #readerQR span {
@@ -76,9 +74,6 @@
   text-indent: 0;
   text-align: center;
   display: inline-block;
-  margin-left: 0.3rem;
-  margin-right: 1rem;
-  
 }
   
 #readerQR img[alt="Info icon"] { 
