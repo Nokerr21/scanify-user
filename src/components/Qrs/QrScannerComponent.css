@@ -67,8 +67,8 @@
   white-space: pre-wrap !important;
   display: inline-block;
   text-align: center !important;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 1.8rem;
+  margin-right: 1rem;
 }
 
 #readerQR span {
