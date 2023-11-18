@@ -58,18 +58,18 @@
   color: hsla(0, 0%, 0%, 1) !important;
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   font-size: 0.9em;
-  padding: 0.5em 0.5em;
+  padding: 0.3em 0.3em !important;
   font-weight: bold;
-  margin-top: 0.3rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-top: 0.3rem !important;
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
   border-radius: 0.5rem !important;
   border: 1px solid hsla(0, 0%, 100%, 0.8) !important;
-  overflow-wrap: break-word;
-  max-width: 200px;
-  white-space: pre-wrap;
+  overflow-wrap: break-word !important;
+  max-width: 200px !important;
+  white-space: pre-wrap !important;
   display: inline-block;
-  text-align: center;
+  text-align: center !important;
 }
 
 #readerQR span {
