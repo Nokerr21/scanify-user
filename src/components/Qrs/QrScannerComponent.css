@@ -26,7 +26,6 @@
     flex-direction: column;
     font-family: "Ubuntu", Arial, Helvetica, sans-serif;
     font-weight: bold;
-    text-align: center;
   }
 
   .log-scanner {
@@ -68,6 +67,7 @@
   white-space: pre-wrap !important;
   display: inline-block;
   text-align: center !important;
+  text-indent: 0;
 }
 
 #readerQR span {
@@ -95,8 +95,7 @@
   font-size: 0.9em;  
   transition: 0.3s background;
   margin-top: 1rem;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
+  text-indent: 0;
 } 
   
 #readerQR button:hover,
