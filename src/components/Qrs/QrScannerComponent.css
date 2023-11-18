@@ -58,10 +58,13 @@
   color: hsla(0, 0%, 0%, 1) !important;
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   font-size: 0.9em;
+  font-weight: bold;
   margin-top: 0.2rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  border-radius: 0.5rem;
+  padding: 0.5em 0.75em;
+  border-radius: 0.5rem !important;
+  border: 1px solid hsla(0, 0%, 100%, 0.8) !important;
 }
 
 #readerQR span {
