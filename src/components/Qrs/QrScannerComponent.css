@@ -67,10 +67,12 @@
   overflow-wrap: break-word;
   max-width: 250px;
   white-space: pre-wrap;
+  display: inline-block;
 }
 
 #readerQR span {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  text-indent: 0;
 }
   
 #readerQR img[alt="Info icon"] { 
