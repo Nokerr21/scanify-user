@@ -67,7 +67,7 @@
   white-space: pre-wrap !important;
   display: inline-block;
   text-align: center !important;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   margin-right: 1rem;
 }
 
@@ -76,7 +76,7 @@
   text-indent: 0;
   text-align: center;
   display: inline-block;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   margin-right: 1rem;
 }
   
@@ -98,8 +98,6 @@
   font-size: 0.9em;  
   transition: 0.3s background;
   margin-top: 1rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 } 
   
 #readerQR button:hover,
