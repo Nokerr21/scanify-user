@@ -72,8 +72,9 @@
 
 #readerQR span {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-  color: green;
   text-indent: 0;
+  text-align: center;
+  display: inline-block;
 }
   
 #readerQR img[alt="Info icon"] { 
