@@ -75,6 +75,8 @@
   text-indent: 0;
   text-align: center;
   display: inline-block;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
   
 #readerQR img[alt="Info icon"] { 
