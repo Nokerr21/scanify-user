@@ -115,5 +115,4 @@ button:focus-visible {
   
 #readerQR video {
   border: 1px solid hsla(0, 0%, 90%, 0.95) !important;
-  max-height: 260px;
 }
