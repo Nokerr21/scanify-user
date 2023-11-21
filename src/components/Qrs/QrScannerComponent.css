@@ -114,5 +114,6 @@ button:focus-visible {
 }
   
 #readerQR video {
-  border: 1px solid hsla(0, 0%, 90%, 0.95) !important; 
+  border: 1px solid hsla(0, 0%, 90%, 0.95) !important;
+  height: 250;
 }
