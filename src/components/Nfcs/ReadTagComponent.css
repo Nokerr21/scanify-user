@@ -63,5 +63,27 @@
     font-size: large;
     font-family: "Prompt", Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: large;
+  }
+
+  @media screen and (min-device-width:900px) {
+    .row {
+      min-height: 12rem;
+      gap: 2.5rem;
+    }
+
+    .btn {
+      padding: 0.5em 0.75em 0.5em 0.75em;
+      margin-left: 11.3rem;
+      margin-right: 11.3rem;
+      font-size: large;
+    }
+
+    .log {
+      max-width: 700px;
+      font-size: large;
+    }
+
+    .labl {
+      font-size: x-large;
+    }
   }
