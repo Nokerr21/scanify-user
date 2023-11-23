@@ -4,12 +4,12 @@
   }
 
   .row {
-    background-image: url(../../../images/divReadTag0.png);
+    background-image: url('../../../images/divReadTag0.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    box-shadow: 7px 7px #272727;
-    padding:1.1rem;
+    box-shadow: 7px 7px var(--div-box-shadow-color);
+    padding: 1.1rem;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
@@ -18,13 +18,14 @@
     text-indent: 0.2rem;
     margin-bottom: 0.5rem;
     margin-top: 7.5rem;
+    transition: all 0.3s ease-out;
   }
 
   .btn {
     background: hsla(0, 0%, 90%, 0.7);
     border: 1px solid hsla(0, 0%, 100%, 0.8);
     color: hsla(0, 0%, 0%, 1);
-    padding: 0.5em 0.75em;
+    padding: 0.5em 0.75em 0.5em 0.75em;
     border-radius: 1.5em;
     cursor: pointer;
     outline: none;
@@ -32,6 +33,8 @@
     font-family: "Ubuntu", Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 0.9em;
+    margin-left: 2.8rem;
+    margin-right: 2.8rem;
   }
   
   .btn:hover,

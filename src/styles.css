@@ -2,144 +2,51 @@
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
   }
+
+  :root {
+    --body-background: #333;
+    --div-background-image: url('./images/divReadTag0.png');
+    --div-scanner-background-image: url('./images/divScanner0_rot.png');
+    --div-background: rgb(255, 102, 0);
+    --div-box-shadow-color: #272727;
+    --nav-background-color: #272727;
+    --nav-box-shadow-color: #111;
+    --menu-button-color: #cccccc;
+    --menu-close-button-color: orange;
+    --wrapper-background-color-first: #181818;
+    --wrapper-background-color-second: #333;
+    --info-list-button-shadow: #1b1b1b;
+    --info-list-text-color: whitesmoke;
+
+  }
+
+  [theme="light"] {
+    --body-background: #e6e6e6;
+    --div-background: rgb(255, 102, 0);
+    --div-background-image: url('./images/divReadTag0.png');
+    --div-scanner-background-image: url('./images/divScanner0_rot.png');
+    --div-box-shadow-color: #d8d8d8;
+    --nav-background-color: #c5c5c5;
+    --nav-box-shadow-color: #8d8d8d;
+    --menu-button-color: #525252;
+    --menu-close-button-color: rgb(255, 102, 0);
+    --wrapper-background-color-first: #aaaaaa;
+    --wrapper-background-color-second: #ebeaea;
+    --info-list-button-shadow: #b3b3b3;
+    --info-list-text-color: #3f3f3f;
+  }
   
   body {
-    background: #333;
+    background: var(--body-background);
     color: whitesmoke;
     max-width: 400px;
     padding: 1rem;
     margin: 0 auto;
+    transition: background 0.3s ease-out;
   }
   
   .new-item-form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
-  
-  .form-row {
-    background-color: #111;
-    padding:2rem;
-    border-radius: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    text-align: left;
-    text-indent: 0.2rem;
-  }
-
-  .classic-row {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: left;
-    text-indent: 0rem;
-  }
-  
-  .new-item-form input {
-    outline: none;
-    border: 1px solid hsl(200, 100%, 40%);
-    background: hsl(200, 100%, 30%);
-    border-radius: 0.5em;
-    padding: 0.5em 0.75em;
-    color: hsl(200, 100%, 90%);
-  }
-  
-  .new-item-form input:focus {
-    border: 1px solid hsl(200, 100%, 70%);
-  }
-  
-  .header {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .list {
-    margin: 0;
-    padding: 0;
-    margin-left: 0.5rem;
-    list-style: none;
-  }
-  
-  .list li:has(input:checked) label {
-    color: hsl(200, 20%, 40%);
-  }
-  
-  .list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-  
-  .list li {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  
-  .list li label {
-    display: flex;
-    gap: 0.25rem;
-    cursor: pointer;
-    align-items: center;
-  }
-  
-  .list li:has(input:focus-visible) label {
-    outline: 1px solid hsl(200, 100%, 50%);
-  }
-  
-  .list li input {
-    outline: none;
-    width: 0;
-    height: 0;
-    appearance: none;
-    pointer-events: none;
-    position: absolute;
-  }
-  
-  .list li label::before {
-    content: "";
-    display: block;
-    width: 0.9rem;
-    height: 0.9rem;
-    background: hsl(200, 100%, 90%);
-    border-radius: 0.25em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .list li label:hover::before {
-    background: hsl(200, 100%, 80%);
-  }
-  
-  .list li:has(input:checked) label::before {
-    content: "✔";
-    background: hsl(200, 100%, 40%);
-    color: hsl(200, 100%, 90%);
-    font-size: 0.75rem;
-    font-weight: bold;
-  }
-  
-  .list li:has(input:checked) label:hover::before {
-    background: hsl(200, 100%, 30%);
-  }
-
-  .container {
-    margin: 1rem;
-    text-align: center;
-  }
-
-  .log {
-    overflow-wrap: break-word;
-    max-width:400px;
-    white-space:pre-wrap;
-  }
-
-  .log-info {
-    overflow-wrap: break-word;
-    max-width:400px;
-    white-space:pre-wrap;
-    margin: 0.1rem;
   }

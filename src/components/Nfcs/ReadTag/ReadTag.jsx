@@ -1,7 +1,6 @@
 import logReadTag from "./LogReadTag";
 import axios from "axios";
 
-
 export default async function readTag() {
   if ("NDEFReader" in window) {
     const ndef = new NDEFReader();
