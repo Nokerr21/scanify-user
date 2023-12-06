@@ -16,10 +16,9 @@ export function renderQrScanner(){
   
     html5QrcodeScanner.render(onScanSuccess);
 
-    async function onScanSuccess(decodedText, decodedResult) {
+    async function onScanSuccess(decodedText) {
         var dateTime = getDateAndTime();
-        console.log(`Scan result: ${decodedText}`, decodedResult);
-        logQrScanRes("Message: '" + decodedText + "' decoded!" + "\n" + "TimeStamp: " + dateTime);
+        logQrScanRes("Decoded information:\n" + decodedText + "\nScanned at: " + dateTime);
         html5QrcodeScanner.pause();
         await sleep(700);
         html5QrcodeScanner.resume();
