@@ -69,7 +69,8 @@
     overflow-wrap: break-word !important;
     max-width: 200px !important;
     white-space: pre-wrap !important;
-    display: inline-block;
+    display: grid;
+    grid-auto-flow: column;
     text-align: center !important;
     text-indent: 0;
   }
@@ -82,7 +83,9 @@
     font-family: "Ubuntu", Arial, Helvetica, sans-serif;
     text-indent: 0;
     text-align: center;
-    display: inline-block;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
   }
     
   #readerQR img[alt="Info icon"] { 
@@ -104,10 +107,6 @@
     transition: 0.3s background;
     margin-top: 1rem;
     text-indent: 0;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.5rem;
-    align-items: center;
   } 
     
   #readerQR button:hover,
