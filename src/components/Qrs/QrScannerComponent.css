@@ -84,7 +84,7 @@
     text-align: center;
     display: grid;
     grid-auto-flow: column;
-    gap: 0.5rem;
+    
     align-items: center;
   }
     
