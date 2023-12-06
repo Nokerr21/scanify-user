@@ -82,10 +82,7 @@
     font-family: "Ubuntu", Arial, Helvetica, sans-serif;
     text-indent: 0;
     text-align: center;
-    display: grid;
-    grid-auto-flow: row;
-    
-    align-items: center;
+    display: inline-block;
   }
     
   #readerQR img[alt="Info icon"] { 
@@ -107,6 +104,10 @@
     transition: 0.3s background;
     margin-top: 1rem;
     text-indent: 0;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+    align-items: center;
   } 
     
   #readerQR button:hover,
