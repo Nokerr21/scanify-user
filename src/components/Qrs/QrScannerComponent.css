@@ -86,6 +86,7 @@
     display: grid;
     grid-auto-flow: column;
     align-items: center;
+    max-width: 300px;
   }
     
   #readerQR img[alt="Info icon"] { 
