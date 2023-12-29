@@ -61,7 +61,6 @@ export default async function readTag() {
       }).catch(err => {
         console.log("NFC reading stopped...");
       });
-      
     } catch(error) {
       if (error instanceof Error && error.name === 'AbortError') {
         // work time expired, just return
