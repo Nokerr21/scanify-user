@@ -1,5 +1,5 @@
 import logReadTag from "./LogReadTag";
-import logReadTagTest from "./LogReadTagTest"
+import logReadTagTest from "./LogReadTagInfo"
 import getTagInfo from "./GetTagInfo";
 
 export default async function readTag() {
@@ -25,7 +25,7 @@ export default async function readTag() {
       });
     } catch(error) {
       if (error instanceof Error && error.name === 'AbortError') {
-        // work time expired, just return
+        // return, scanning stopped...
       }
       else {
         logReadTag(error);

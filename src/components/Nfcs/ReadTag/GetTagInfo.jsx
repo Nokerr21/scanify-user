@@ -1,6 +1,6 @@
 import logReadTag from "./LogReadTag";
 import axios from "../../../axios";
-import logReadTagTest from "./LogReadTagTest"
+import logReadTagTest from "./LogReadTagInfo"
 import { getDateAndTime } from "../../Date/GetDateAndTime";
 
 export default async function getTagInfo(event) {
