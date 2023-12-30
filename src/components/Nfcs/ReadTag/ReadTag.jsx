@@ -17,6 +17,7 @@ export default async function readTag() {
         }, { once: true });
         ndef.scan({ signal: abortContr.signal }).catch(err => reject(err));
         ndef.onreading = event => {
+          console.log(event);
           getTagInfo(event);
         }
       }).catch(err => {
