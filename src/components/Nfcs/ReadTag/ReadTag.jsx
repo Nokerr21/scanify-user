@@ -1,11 +1,11 @@
 import logReadTag from "./LogReadTag";
-import logReadTagTest from "./LogReadTagInfo"
+import logReadTagInfo from "./LogReadTagInfo"
 import getTagInfo from "./GetTagInfo";
 
 export default async function readTag() {
   if ("NDEFReader" in window) {
     const ndef = new NDEFReader();
-    logReadTagTest("Bring the tag near the reader.  Step[1/3]");
+    logReadTagInfo("Bring the tag near the reader.  Step[1/3]");
     logReadTag("");
     try {
       return new Promise((resolve, reject) => {
@@ -17,7 +17,6 @@ export default async function readTag() {
         }, { once: true });
         ndef.scan({ signal: abortContr.signal }).catch(err => reject(err));
         ndef.onreading = event => {
-          console.log(event);
           getTagInfo(event);
         }
       }).catch(err => {
@@ -32,7 +31,7 @@ export default async function readTag() {
       } 
     }
   } else {
-    logReadTagTest("Oops!");
+    logReadTagInfo("Oops!");
     logReadTag("WebNFC API isn't supported in this browser.");
   }
 }
