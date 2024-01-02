@@ -18,7 +18,14 @@ export function renderQrScanner(){
 
     async function onScanSuccess(decodedText) {
         var dateTime = getDateAndTime();
-        logQrScanRes("Decoded information:\n" + decodedText + "\nScanned at: " + dateTime);
+        try{
+            new URL(decodedText);
+            logQrScanRes("Decoded information:\n" + "<a href=" + "\"" + decodedText + "\"" + ">" + decodedText + "</a>" + "\nScanned at: " + dateTime);
+        } catch (err) {
+            // if decodedText can not be the URL 
+            logQrScanRes("Decoded information:\n" + decodedText + "\nScanned at: " + dateTime);
+        }
+    
         html5QrcodeScanner.pause();
         await sleep(700);
         html5QrcodeScanner.resume();
