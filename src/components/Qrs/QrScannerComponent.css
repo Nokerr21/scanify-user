@@ -44,6 +44,12 @@
     margin-bottom: 0rem;
   }
 
+  .log-scanner a {
+    color: white;
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
   .labl {
     color: white;
     margin-bottom: 0.5rem;

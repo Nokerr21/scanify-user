@@ -84,13 +84,6 @@
   font-weight: bold;
 }
 
-.labl-read a {
-  color: white;
-  font-size: large;
-  font-family: "Prompt", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
-
 @media screen and (min-width: 700px) {
   .row {
     min-height: 12rem;
