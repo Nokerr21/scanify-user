@@ -19,7 +19,7 @@ export function renderQrScanner(){
     async function onScanSuccess(decodedText) {
         var dateTime = getDateAndTime();
         try{
-            new URL(decodedText);
+            new URL(decodedText); // is decodedText the URL?
             logQrScanRes("Decoded information:\n" + "<a href=" + "\"" + decodedText + "\"" + ">" + decodedText + "</a>" + "\nScanned at: " + dateTime);
         } catch (err) {
             // if decodedText can not be the URL 
